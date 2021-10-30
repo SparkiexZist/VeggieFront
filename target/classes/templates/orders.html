@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinkao Restaurant Service Website</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/myScript.js}"></script>
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td)
+                {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().localeCompare(filter) === 0)
+                    {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<style>
+    body
+    {
+        /*            background-image: url('https://wallpaperaccess.com/full/2029165.jpg');*/
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpaperaccess.com/full/1598445.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+<body>
+<div th:insert="fragments/header :: header"></div>
+
+<div class="container" style="background-color:white; margin-top:30px; border-radius:25px;">
+    <h1 class="display-6">Vegetable List</h1>
+
+    <table class="table table-striped">
+        <thead>
+        <div>
+            <tr scope="column">
+                <th>Date</th>
+                <th>name</th>
+                <th>phone</th>
+                <th>address</th>
+                <th>vegetable name</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>Status</th>
+                <th>PaymentDate</th>
+
+            </tr>
+        </div>
+        </thead>
+        <tbody>
+        <div th:each="order : ${veglist}">
+            <tr id="list" class="ord"  scope="row">
+
+                <td th:text="${order.date}"></td>
+                <td th:text="${order.name}"></td>
+                <td th:text="${order.mobile}"></td>
+                <td th:text="${order.address}"></td>
+                <td >
+                    <ul th:each="i : ${order.getCartList()}">
+                        <span th:text="${i.getVegetable().name}"></span>
+                    </ul>
+                </td>
+                <td >
+                    <ul th:each="i : ${order.getCartList()}">
+                        <span th:text="${i.getVegetable().price}+ ' &#3647;'"></span>
+                    </ul>
+                </td>
+                <td >
+                    <ul th:each="i : ${order.getCartList()}">
+                        <span th:text="${i.getQuantity()}"></span>
+                    </ul>
+                </td>
+                <td th:text="${order.status}"></td>
+                <td th:text="${order.payment}"></td>
+                <td sec:authorize="hasRole('ADMIN')" style="text-align: center">
+                    <a th:href="@{/order/list/edit/{id}(id=${order.getOrder_Id()})}" ><button type="button" class="btn btn-primary">Payment</button>
+                    </a>
+                </td>
+                <td sec:authorize="hasRole('ADMIN')" style="text-align: center">
+                    <a th:href="@{/order/list/remove/{id}(id=${order.getOrder_Id()})}" ><button type="button" class="btn btn-primary">Delete</button>
+                    </a>
+                </td>
+            </tr>
+        </div>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
