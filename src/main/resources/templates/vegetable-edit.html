@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinkao</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<style>
+    body
+    {
+        /*            background-image: url('https://wallpaperaccess.com/full/2029165.jpg');*/
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpaperaccess.com/full/1598445.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+<body>
+
+<div th:insert="fragments/header :: header"></div>
+
+<div class="container">
+    <h1 class="display-6">Edit Vegetable</h1>
+
+    <form th:object="${vegetable}" th:action="@{/vegetable/edit}" method="POST">
+
+        <input type="hidden" th:field="*{id}" id="id">
+
+        <div class="mb-3">
+            <label for="nameInput" class="form-label">Name</label>
+            <input id="nameInput" type="text" class="form-control" th:field="*{name}">
+        </div>
+        <div class="mb-3">
+            <label for="priceInput" class="form-label">Address</label>
+            <input id="priceInput" type="text" class="form-control" th:field="*{price}">
+        </div>
+        <div class="mb-3">
+            <label for="weightInput" class="form-label">Phone</label>
+            <input id="weightInput" type="text" class="form-control" th:field="*{weight}">
+        </div>
+        <div class="mb-3">
+            <label for="amountInput" class="form-label">Number of Seats</label>
+            <input id="amountInput" type="text" class="form-control" th:field="*{amount}">
+        </div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>
+</body>
+</html>
