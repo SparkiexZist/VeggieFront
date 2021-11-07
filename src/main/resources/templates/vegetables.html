@@ -40,12 +40,12 @@
 
                                             <button sec:authorize="hasRole('USER')" type="button" class="btn btn-light increase" th:onclick="decrementValue([[${vegetable}]])"  value="-" style="border-style: hidden;">-</button>
                                             <input  sec:authorize="hasRole('USER')" type="number" style="text-align: center;border-style: hidden;background:none;"   th:id="${vegetable.id+'increase'}"  value="0" />
-                                            <button sec:authorize="hasRole('USER')" type="button" class="btn btn-light" th:onclick="incrementValue([[${vegetable}]])"  value="+" style="border-style: hidden;">+</button>
+                                            <button sec:authorize="hasRole('USER')" type="button" class="btn btn-light" th:onclick="incrementValue([[${vegetable}]])"  value="+" style="border-style: hidden;" id="increase">+</button>
                                             <input hidden type="text" th:name="name" th:value="${vegetable.id}">
                                             <input  hidden type="number" style="text-align: center;border-style: hidden;background:none;"  th:id="${vegetable.id+'increase2'}" th:name="num" value="0" />
                                         </div>
                                         <div>
-                                            <button sec:authorize="hasRole('USER')" class="btn btn-primary" type="submit">Add</button>
+                                            <button sec:authorize="hasRole('USER')" class="btn btn-primary" type="submit" id = "add">Add</button>
                                             <a sec:authorize="hasRole('ADMIN')" style="text-align: center" th:href="@{/vegetable/edit/{id}(id=${vegetable.id})}" ><button type="button" class="btn btn-primary">Edit</button></a>
 
                                         </div>

@@ -1,6 +1,5 @@
 package th.ac.ku.kinkao.controller;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -43,7 +42,8 @@ public class OrderController
 
     // Get ที่ไม่ได้ใส่อะไรคือดึงมาจากหน้า "/restaurant" และต้องมี Model เพราะต้องส่งตัวแปรอาร์เรย์ลิชไปให้
     @GetMapping
-    public String getCheckPage(Model model, Authentication authentication){
+    public String getCheckPage(Model model, Authentication authentication)
+    {
         model.addAttribute("veglist", service.getDummy(authentication.getName()));
         return "orders";
     }
