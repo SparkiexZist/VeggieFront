@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Kinkao Restaurant Service Website</title>
+    <title>Veggie</title>
     <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <script th:src="@{/js/bootstrap.min.js}"></script>
 </head>
@@ -10,11 +10,25 @@
     body
     {
         /*            background-image: url('https://wallpaperaccess.com/full/2029165.jpg');*/
-        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://images.wallpaperscraft.com/image/vegetables_basket_green_106346_1920x1080.jpg');
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpaperaccess.com/full/1598445.jpg');
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+    }
+
+    #login .container #login-row #login-column #login-box {
+        margin-top: 120px;
+        max-width: 600px;
+        height: 320px;
+        border: 1px solid #9C9C9C;
+        background-color: #EAEAEA;
+    }
+    #login .container #login-row #login-column #login-box #login-form {
+        padding: 20px;
+    }
+    #login .container #login-row #login-column #login-box #login-form #register-link {
+        margin-top: -85px;
     }
 </style>
 <body>

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Kinkao Restaurant Service Website</title>
+    <title>Veggie</title>
     <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <script th:src="@{/js/bootstrap.min.js}"></script>
     <script th:src="@{/js/myScript.js}"></script>
@@ -21,7 +21,7 @@
 <body>
     <div th:insert="fragments/header :: header"></div>
 
-    <div class="input-group mb-3 d-flex justify-content-center">
+    <div class="input-group mb-3 d-flex justify-content-center ">
         <div class="input-group-append">
                 <div class="container" style="margin-top:50px;">
                     <table style="width: 100%">
@@ -40,12 +40,12 @@
 
                                             <button sec:authorize="hasRole('USER')" type="button" class="btn btn-light increase" th:onclick="decrementValue([[${vegetable}]])"  value="-" style="border-style: hidden;">-</button>
                                             <input  sec:authorize="hasRole('USER')" type="number" style="text-align: center;border-style: hidden;background:none;"   th:id="${vegetable.id+'increase'}"  value="0" />
-                                            <button sec:authorize="hasRole('USER')" type="button" class="btn btn-light" th:onclick="incrementValue([[${vegetable}]])"  value="+" style="border-style: hidden;">+</button>
+                                            <button sec:authorize="hasRole('USER')" type="button" class="btn btn-light" th:onclick="incrementValue([[${vegetable}]])"  value="+" style="border-style: hidden;" id="increase">+</button>
                                             <input hidden type="text" th:name="name" th:value="${vegetable.id}">
                                             <input  hidden type="number" style="text-align: center;border-style: hidden;background:none;"  th:id="${vegetable.id+'increase2'}" th:name="num" value="0" />
                                         </div>
                                         <div>
-                                            <button sec:authorize="hasRole('USER')" class="btn btn-primary" type="submit">Add</button>
+                                            <button sec:authorize="hasRole('USER')" class="btn btn-primary" type="submit" id = "add">Add</button>
                                             <a sec:authorize="hasRole('ADMIN')" style="text-align: center" th:href="@{/vegetable/edit/{id}(id=${vegetable.id})}" ><button type="button" class="btn btn-primary">Edit</button></a>
 
                                         </div>
