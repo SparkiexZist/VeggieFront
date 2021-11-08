@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <link th:rel="stylesheet" th:href="@{/css/myStyle.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body
+    {
+        /*            background-image: url('https://wallpaperaccess.com/full/2029165.jpg');*/
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpaperaccess.com/full/1598445.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+    .row{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .pointer {cursor: pointer;}
+</style>
+
+<body>
+<div class="container" style="font-family: 'Mali', cursive;" th:fragment="salad-salmon">
+    <div class="row" style="margin-top: 5%; margin-bottom: 5%;">
+        <div class="card col" style="width: 4.5rem;">
+            <img class="card-img-top pointer" data-bs-toggle="collapse" data-bs-target="#salad-salmon" src="../images/salad-salmon.jpg" alt="">
+            <h3 style="text-align: center;">Salad salmon</h3>
+            <div class="collapse" id="salad-salmon">
+                <b>ส่วนประกอบ</b>
+                <p>
+                    1. แซลมอนสด 300 กรัม <br>
+                    2. กรีนโอ๊ก 3 ใบ <br>
+                    3. เรดโอ๊ก 3 ใบ <br>
+                    4. ฟิลเล ไอซ์เบิร์ก 3 ใบ <br>
+                    5. ผักคอส 3 ใบ <br>
+                    6. แตงกวาญี่ปุ่น 1 ลูก <br>
+                    7. มะเขือเทศราชินี 5 ลูก <br>
+                    8. น้ำสลัด <br>
+                </p>
+                <b>วิธีทำ</b>
+                <p>
+                    <b>ขั้นแรก</b>: เตรียมแซลมอน + ย่างแซลมอน <br>
+                    - นำแซลมอนที่เราซื้อมาซับด้วยกระดาษทิชชู่แทนการล้างด้วยน้ำเปล่า เพราะแซลมอนที่แล่แล้วไม่ควรล้างน้ำ จะทำให้แซลมอนคาว <br>
+                    - ตั้งกระทะโดยใช้ไฟปานกลางค่อนอ่อน ทาน้ำมันพืชลงไปในกระทะ รอให้กระทะร้อนค่อยนำแซลมอนลงไปย่าง เมื่อแซลมอนสุกแล้วนำขึ้นพักไว้เตรียมจัดเสิร์ฟ
+                    <br>
+                    <b>ขั้นสอง</b>: เสิร์ฟ <br>
+                    - นำกรีนโอ๊ก เรดโอ๊ก ฟิลเล ไอซ์เบิร์ก ผักคอส แตงกวาญี่ปุ่น มะเขือเทศราชินี หอมแขกหั่นแว่น และแซลมอนย่างจัดเสิร์ฟลงในจาน เสิร์ฟพร้อมน้ำสลัดแซ่บ เท่านี้คุณแม่ก็ฟินแล้วจ้า
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -21,7 +21,7 @@
 
 <div th:insert="fragments/header :: header"></div>
 
-<div class="container">
+<div class="container" style="background-color:white; margin-top:20px;padding-bottom: 20px;border-radius: 25px;">
     <h1 class="display-6">Edit Vegetable</h1>
 
     <form th:object="${vegetable}" th:action="@{/vegetable/edit}" method="POST">
@@ -33,15 +33,15 @@
             <input id="nameInput" type="text" class="form-control" th:field="*{name}">
         </div>
         <div class="mb-3">
-            <label for="priceInput" class="form-label">Address</label>
+            <label for="priceInput" class="form-label">Price</label>
             <input id="priceInput" type="text" class="form-control" th:field="*{price}">
         </div>
         <div class="mb-3">
-            <label for="weightInput" class="form-label">Phone</label>
+            <label for="weightInput" class="form-label">Weight</label>
             <input id="weightInput" type="text" class="form-control" th:field="*{weight}">
         </div>
         <div class="mb-3">
-            <label for="amountInput" class="form-label">Number of Seats</label>
+            <label for="amountInput" class="form-label">Amount</label>
             <input id="amountInput" type="text" class="form-control" th:field="*{amount}">
         </div>
         <button type="submit" class="btn btn-primary">Edit</button>
