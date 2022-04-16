@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinkao Restaurant Service Website</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <link th:rel="stylesheet" th:href="@{/css/myStyle.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    body
+    {
+        /*            background-image: url('https://wallpaperaccess.com/full/2029165.jpg');*/
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpaperaccess.com/full/1598445.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+    .row{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .pointer {cursor: pointer;}
+</style>
+
+<body>
+<div th:insert="fragments/header :: header"></div>
+<div>
+    <h1 style="text-align: center; color: white; font-family: 'Mali', cursive; margin-top: 2.5%;">Food menu</h1>
+
+    <div th:insert="menu/salad-shrimp :: salad-shrimp"></div>
+
+    <div th:insert="menu/salad-salmon :: salad-salmon"></div>
+
+    <div th:insert="menu/salad-roll :: salad-roll"></div>
+
+    <div th:insert="menu/pork-salad-roll :: pork-salad-roll"></div>
+
+</div>
+
+</div>
+
+</body>
+</html>

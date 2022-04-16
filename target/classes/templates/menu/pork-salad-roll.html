@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <script th:src="@{/js/bootstrap.min.js}"></script>
+  <link th:rel="stylesheet" th:href="@{/css/myStyle.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body
+    {
+        /*            background-image: url('https://wallpaperaccess.com/full/2029165.jpg');*/
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpaperaccess.com/full/1598445.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+    .row{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .pointer {cursor: pointer;}
+</style>
+
+<body>
+<div class="container" style="font-family: 'Mali', cursive;" th:fragment="pork-salad-roll">
+  <div class="row" style="margin-top: 5%; margin-bottom: 5%;">
+    <div class="card col" style="width: 4.5rem;">
+      <img class="card-img-top pointer" data-bs-toggle="collapse" data-bs-target="#pork-salad-roll" src="../images/pork-salad-roll.jpg" alt="">
+      <h3 style="text-align: center;">Crispy shredded pork salad roll</h3>
+      <div class="collapse" id="pork-salad-roll">
+        <b>ส่วนประกอบ</b>
+        <p>
+          1. ขนมปังโฮลวีต 8 แผ่น <br>
+          2. หมูหยอง 2 กระป๋อง <br>
+          3. นำ้พริกเผา 2 ช้อนโต๊ะ <br>
+          4. แครอทหั่นเส้น 1/2 ลูก <br>
+          5. กรีนโอ๊ก 5 ใบ <br>
+          6. เรดโอ๊ก 5 ใบ <br>
+          7. สาหร่าย 8 แผ่น <br>
+        </p>
+        <b>วิธีทำ</b>
+        <p>
+          <b>ขั้นแรก</b> : รีดขนมปังและตัดขอบ <br>
+          - นำขนมปังโฮลวีตมารีดให้แบน ๆ จากนั้นใช้มีดตัดขอบขนมปังออกทั้ง 4 ด้าน ทำจนครบทั้ง 8 แผ่นแล้วเตรียมนำไปห่อ <br>
+          <b>ขั้นสอง</b> : ม้วน <br>
+          - วางขนมปังลงบนเขียง ทาด้วยน้ำพริกเผาให้ทั่วแผ่นขนมปัง จากนั้นนำเรดโอ๊กและกรีนโอ๊กมาวาง ตามด้วยแครอทหั่นเส้น และวางด้วย หมูหยอง แล้วม้วนขนมปังแล้วนำสาหร่ายมาพันรอบ ๆ ตรงเกือบ ๆ ปลายของทั้งสองฝั่งขนมปัง
+          <br>
+          <b>ขั้นสาม</b> : เสิร์ฟ <br>
+          - นำสลัดโรลล์หมูหยองมาตัดครึ่ง ก่อนนำไปจัดเสิร์ฟ
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <link th:rel="stylesheet" th:href="@{/css/myStyle.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body
+    {
+        /*            background-image: url('https://wallpaperaccess.com/full/2029165.jpg');*/
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpaperaccess.com/full/1598445.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+    .row{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .pointer {cursor: pointer;}
+</style>
+
+<body>
+<div class="container" style="font-family: 'Mali', cursive;" th:fragment="salad-shrimp">
+    <div class="row" style="margin-top: 5%; margin-bottom: 5%;">
+        <div class="card col" style="width: 4.5rem;">
+            <img class="card-img-top pointer" data-bs-toggle="collapse" data-bs-target="#salad-shrimp" src="../images/salad-shrimp.jpg" alt="">
+            <h3 style="text-align: center;">Avocado with shrimp salad</h3>
+            <div class="collapse" id="salad-shrimp">
+                <b>ส่วนประกอบ</b>
+                <p>
+                    1. อะโวคาโด 1 ผล <br>
+                    2. กุ้งลวกสุก 10 ตัว <br>
+                    3. กรีนโอ๊ก 3 ใบ <br>
+                    4. เรดโอ๊ก 3 ใบ <br>
+                    5. ไอซ์เบิร์ก 3 ใบ <br>
+                    6. ผักคอส 3 ใบ <br>
+                    7. แตงกวาญี่ปุ่น 1 ลูก <br>
+                    8. มะเขือเทศราชินี 5 ลูก <br>
+                    9. น้ำสลัด <br>
+                </p>
+                <b>วิธีทำ</b>
+                <p>
+                    - นำกรีนโอ๊ก เรดโอ๊ก ไอซ์เบิร์ก ผักคอส แตงกวาญี่ปุ่น มะเขือเทศราชินี อะโวคาโดหั่น และกุ้งลวกสุกจัดเสิร์ฟลงในจาน เสิร์ฟพร้อมน้ำสลัดที่เตรียมไว้
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <link th:rel="stylesheet" th:href="@{/css/myStyle.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body
+    {
+        /*            background-image: url('https://wallpaperaccess.com/full/2029165.jpg');*/
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://wallpaperaccess.com/full/1598445.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+    .row{
+        width: 50%;
+        margin-left: 25%;
+    }
+    .pointer {cursor: pointer;}
+</style>
+
+<body>
+  <div class="container" style="font-family: 'Mali', cursive;" th:fragment="salad-roll">
+    <div class="row" style="margin-top: 5%; margin-bottom: 5%;">
+      <div class="card col" style="width: 4.5rem;">
+          <img class="card-img-top pointer" data-bs-toggle="collapse" data-bs-target="#salad-roll" src="../images/salad-roll.jpg" alt="">
+          <h3 style="text-align: center;">Salad roll</h3>
+          <div class="collapse" id="salad-roll">
+              <b>ส่วนประกอบ</b>
+              <p>
+                  1. ปูอัด 12 ชิ้น <br>
+                  2. กรีนโอ๊ก 120 กรัม <br>
+                  3. เร้ดโอ๊ก 120 กรัม <br>
+                  4. แตงกวาหั่นยาว 120 กรัม <br>
+                  5. แครอทหั่นยาว 120 กรัม <br>
+                  6. ผักชี 60 กรัม <br>
+                  7. กระเทียม 30 กรัม <br>
+                  8. รากผักชี 3 ราก <br>
+                  9. น้ำตาลทราย 1 ช้อนโต๊ะ <br>
+                  10. พริกขี้หนู 30 กรัม <br>
+                  11. น้ำมะนาว 1 ช้อนโต๊ะ <br>
+                  12. น้ำปลา 1 ช้อนโต๊ะ <br>
+                  13. มายองเนส 50 กรัม <br>
+                  14. แผ่นเปาะเปี๊ยะญวน 12 แผ่น <br>
+              </p>
+              <b>วิธีทำ</b>
+              <p>
+                  <b>ขั้นแรก</b> : เตรียมซอส <br>
+                  - ทำน้ำจิ้มโดยการโขลกพริกขี้หนู กระเทียม และรากผักชีให้ละเอียด จากนั้นตักใส่ชามผสมไว้ <br>
+                  - ปรุงรสด้วย น้ำตาล น้ำมะนาว น้ำปลา และมายองเนส คนให้เข้ากันแล้วตักใส่ถ้วยพักไว้ <br>
+                  <b>ขั้นสอง</b> : ทำโรลล์ปูอัด <br>
+                  - นำแผ่นเปาะเปี๊ยะญวนชุบน้ำเพื่อให้นิ่ม จากนั้นวางกรีนโอ๊ก เร้ดโอ๊ก แครอท แตงกวา ผักชี และปูอัดลงไปบนแผ่นแป้ง ม้วนเข้าด้วยกัน เรียงใส่จานและวางน้ำจิ้มที่ทำไว้ พร้อมเสิร์ฟ
+              </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
